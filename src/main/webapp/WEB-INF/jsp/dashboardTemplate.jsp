@@ -61,13 +61,18 @@
         <div class="row" align="center">
             <div class="col-md-1"></div>
             <div class="col-md-2">
-                <a href="./data/pens">
-                    <img src="./pen.jpg" style="border-radius: 10px;" alt="step 1">
+                <a href="./data/notepad">
+                    <img src="notepad.jpeg" style="background-color: white;border-radius: 10px;" alt="step 1">
                 </a>
             </div>
             <div class="col-md-2">
-                <a href="./data/laptop">
-                    <img src="laptop.png" style="background-color: white;border-radius: 10px;" alt="step 1">
+                <a href="./data/binder">
+                    <img src="books.jpg" style="border-radius: 10px;" alt="step 1">
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="./data/pens">
+                    <img src="./pen.jpg" style="border-radius: 10px;" alt="step 1">
                 </a>
             </div>
             <div class="col-md-2">
@@ -76,13 +81,8 @@
                 </a>
             </div>
             <div class="col-md-2">
-                <a href="./data/backpack">
-                    <img src="bag.jpg" style="border-radius: 10px;" alt="step 1">
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a href="./data/binder">
-                    <img src="books.jpg" style="border-radius: 10px;" alt="step 1">
+                <a href="./data/laptop">
+                    <img src="laptop.png" style="background-color: white;border-radius: 10px;" alt="step 1">
                 </a>
             </div>
             <div class="col-md-1"></div>
