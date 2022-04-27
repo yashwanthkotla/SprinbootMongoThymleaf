@@ -1,8 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html>
     <head>
     <title>Locations</title>
     <!-- Latest compiled and minified CSS -->

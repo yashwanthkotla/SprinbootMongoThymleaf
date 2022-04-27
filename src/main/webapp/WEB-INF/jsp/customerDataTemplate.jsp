@@ -41,11 +41,11 @@
     <div class="container" style="width: 100%">
         <div class="row" align="center">
             <div class="col-md-5" style="text-align: left;">
-                <p th:text="${data.item}"></p>
+                <p >${data.item}</p>
             </div>
             <div class="col-md-2"></div>
             <div class="col-md-5" style="text-align: right;">
-               <div th:text="${data.location}"></div>
+               <p>${data.location}</p>
             </div>
         </div>
 </h1>
@@ -62,17 +62,19 @@
         <th style="text-align: center !important;border: 2px solid white;">PURCHASE METHOD</th>
     </tr>
     </thead>
-    <tbody th:each="sale: ${data.sales}"  style="font-size: small;">
-        <tr>
-            <td th:text="${sale.quantity}"/>
-            <td th:text="${sale.price}"/>
-            <td th:text="${sale.saleDate}"/>
-            <td th:text="${sale.email}"/>
-            <td th:text="${sale.age}"/>
-            <td th:text="${sale.gender}"/>
-            <td th:text="${sale.purchaseMethod}"/>
-        </tr>
-    </tbody>
+    <c:forEach items="${data.sales}" var="sale">
+        <tbody style="font-size: small;">
+            <tr>
+                <td>${sale.quantity}</td>
+                <td>${sale.price}</td>
+                <td>${sale.saleDate}</td>
+                <td>${sale.email}</td>
+                <td>${sale.age}</td>
+                <td>${sale.gender}</td>
+                <td>${sale.purchaseMethod}</td>
+            </tr>
+        </tbody>
+    </c:forEach>
 </table>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
