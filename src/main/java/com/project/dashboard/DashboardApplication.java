@@ -2,18 +2,16 @@ package com.project.dashboard;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 
-@SpringBootApplication
-@EnableMongoRepositories
-public class DashboardApplication  extends SpringBootServletInitializer{
+@SpringBootApplication(exclude= MongoAutoConfiguration.class)
+public class DashboardApplication  {
 
-	@Override
+	/*@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(DashboardApplication.class);
-	}
+	}*/
+
 	public static void main(String[] args) {
 		SpringApplication.run(DashboardApplication.class, args);
 	}
