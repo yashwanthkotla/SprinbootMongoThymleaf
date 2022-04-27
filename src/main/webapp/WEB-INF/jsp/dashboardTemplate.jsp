@@ -1,7 +1,9 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 
 <html xmlns:th="http://www.w3.org/1999/xhtml">
-    <head>
+<head>
     <title>Locations</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -27,25 +29,27 @@
     </style>
 </head>
 
-    <body style="background-color: navy;">
-        <div>
-            <h1 style="text-align: center;font-size: 60px;color: white;padding-bottom: 25px;" th:text="${data.item}">
-
-        </h1>
-            <div th:each="location: ${data.locations}" class="container" style="width: 100%">
-                <div class="col-md-2">
-                    <img src="../arrow.png" alt="step 1">
-                </div>
-                <div class="col-md-9">
-                    <br/>
-                    <br/>
-                    <a th:href="@{|/data/${data.item}/${location}|}">
-                        <button type="button" class="btn btn-primary btn-lg btn-block nopadding" th:text="${location}"></button>
-                    </a>
-                </div>
-                <div class="col-md-1"></div>
+<body style="background-color: navy;">
+<div>
+    <h1 style="text-align: center;font-size: 60px;color: white;padding-bottom: 25px;" >
+        ${data.item}
+    </h1>
+    <c:forEach items="${data.locations}" var="location">
+        <div class="container" style="width: 100%">
+            <div class="col-md-2">
+                <img src="../arrow.png" alt="step 1">
             </div>
+            <div class="col-md-9">
+                <br/>
+                <br/>
+                <a th:href="/data/${data.item}/${location}">
+                    <button type="button" class="btn btn-primary btn-lg btn-block nopadding" >${location}</button>
+                </a>
             </div>
-    </body>
+            <div class="col-md-1"></div>
+        </div>
+    </c:forEach>
+</div>
+</body>
 
 </html>
